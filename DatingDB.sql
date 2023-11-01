@@ -180,6 +180,7 @@ SELECT dat.first_name AS first_name
 , dat.interests AS interest
 , pro.profession AS profession
 , zip.city AS city
+, zip.province AS province
 , sta.status AS status
 , see.seeking AS seeking
 FROM dating dat
