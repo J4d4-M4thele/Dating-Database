@@ -153,15 +153,6 @@ CREATE TABLE dating (
     interests varchar(50)    
 );
 
-INSERT INTO interests (interest)
-VALUES
-('Music'),
-('Creative Arts'),
-('Content Creation'),
-('Photography'),
-('Journaling'),
-('Sports');
-
 INSERT INTO dating (last_name, first_name, phone, email, gender, birthday, prof_id, zip_code, status_id, seeking_id, interest_id)
 VALUES
 ('Cox', 'Yolanda', '087 433 8645', 'yolandac22@gmail.com', 'F', '1995/11/06', 1, 2188, 1, 1, 1),
@@ -201,7 +192,7 @@ SELECT dat.first_name AS first_name
 , dat.phone AS phone
 , dat.email AS email
 , dat.birthday AS birthday
-, dat.interests AS interest
+, int.interests AS interest
 , pro.profession AS profession
 , zip.city AS city
 , zip.province AS province
@@ -210,5 +201,6 @@ SELECT dat.first_name AS first_name
 FROM dating dat
 LEFT JOIN profession pro ON dat.prof_id = pro.prof_id
 LEFT JOIN zip_code zip ON dat.zip_code = zip.zip_code
+LEFT JOIN interests int ON dat.interest_id = int.interest_id
 LEFT JOIN status sta ON dat.status_id = sta.status_id
 LEFT JOIN seeking see ON dat.seeking_id = see.seeking_id;
