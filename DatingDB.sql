@@ -153,23 +153,47 @@ CREATE TABLE dating (
     interests varchar(50)    
 );
 
-INSERT INTO dating (last_name, first_name, phone, email, gender, birthday, prof_id, zip_code, status_id, seeking, interests)
+INSERT INTO interests (interest)
 VALUES
-('Cox', 'Yolanda', '087 433 8645', 'yolandac22@gmail.com', 'F', '1995/11/06', 1, 2188, 1, 1, 'Content Creation, Music'),
-('Adams', 'Deborah', '059 427 4353', 'debad@gmail.com', 'F', '1979/12/21', 2, 8805, 2, 2, 'Creative Arts, Music'),
-('Adu', 'India', '091 324 5667', 'Adu.India@gmail.com', 'F', '2002/08/31', 2, 9309, 1, 1, 'Photography, Sports'),
-('Knowles', 'Michael', '025 355 8670', 'knowles67@gmail.com', 'M', '1992/04/30', 3, 8800, 1, 1, 'Content Creation, Journaling'),
-('Jones', 'Maxwell', '066 313 7502', 'Max-J@gmail.com', 'M', '1981/02/25', 4, 3202, 1, 1, 'Photography, Music'),
-('Rowland', 'Michelle', '021 788 8249', 'michelle_Rowland@gmail.com', 'F', '1987/05/16', 5, 0727, 1, 1, 'Content Creation, Music'),
-('Joe', 'Moore', '093 345 6788', 'j.moore@gmail.com', 'M', '1990/11/07', 6, 1200, 2, 2, 'Creative Arts, Photography'),
-('Hudson', 'Kendrick', '092 465 7403', 'ken.hud@gmail.com', 'M', '1999/05/09', 4, 0699, 2, 2, 'Photography, Sports'),
-('Bailey', 'George', '072 567 8234', 'CynB97@gmail.com', 'M', '1989/12/20', 6, 0391, 2, 2, 'Journaling, Photography'),
-('Cox', 'Erica', '013 999 8675', 'ericaCox22@gmail.com', 'F', '1995/10/05', 1, 2191, 2, 2, 'Creative Arts, Journaling'),
-('Wright', 'Benedict', '073 357 8902', 'benW77@gmail.com', 'M', '2000/02/25', 3, 9869, 1, 1, 'Journaling, Photography'),
-('Redd', 'Wendy', '021 456 7891', 'Wendy.Redd@gmail.com', 'F', '1997/08/23', 2, 1195, 1, 1, 'Sports, Music'),
-('Soul', 'Randy', '011 785 6324', 'Randy_Soul@gmail.com', 'M', '1989/05/11', 4, 6900, 2, 2, 'Content Creation, Creative Arts'),
-('Williams', 'Trey', '034 784 6702', 'Trey-W@gmail.com', 'M', '1994/07/01', 5, 6900, 1, 1, 'Sports, Creative Arts'),
-('Xavier', 'Caroline', '015 674 8943', 'x_Caro@gmail.com', 'F', '2001/09/13', 6, 9869, 2, 2, 'Journaling, Sports');
+('Music'),
+('Creative Arts'),
+('Content Creation'),
+('Photography'),
+('Journaling'),
+('Sports');
+
+INSERT INTO dating (last_name, first_name, phone, email, gender, birthday, prof_id, zip_code, status_id, seeking_id, interest_id)
+VALUES
+('Cox', 'Yolanda', '087 433 8645', 'yolandac22@gmail.com', 'F', '1995/11/06', 1, 2188, 1, 1, 1),
+('Cox', 'Yolanda', '087 433 8645', 'yolandac22@gmail.com', 'F', '1995/11/06', 1, 2188, 1, 1, 3),
+('Adams', 'Deborah', '059 427 4353', 'debad@gmail.com', 'F', '1979/12/21', 2, 8805, 2, 2, 1),
+('Adams', 'Deborah', '059 427 4353', 'debad@gmail.com', 'F', '1979/12/21', 2, 8805, 2, 2, 6),
+('Adu', 'India', '091 324 5667', 'Adu.India@gmail.com', 'F', '2002/08/31', 2, 9309, 1, 1, 4),
+('Adu', 'India', '091 324 5667', 'Adu.India@gmail.com', 'F', '2002/08/31', 2, 9309, 1, 1, 2),
+('Knowles', 'Michael', '025 355 8670', 'knowles67@gmail.com', 'M', '1992/04/30', 3, 8800, 1, 1, 3),
+('Knowles', 'Michael', '025 355 8670', 'knowles67@gmail.com', 'M', '1992/04/30', 3, 8800, 1, 1, 6),
+('Jones', 'Maxwell', '066 313 7502', 'Max-J@gmail.com', 'M', '1981/02/25', 4, 3202, 1, 1, 1),
+('Jones', 'Maxwell', '066 313 7502', 'Max-J@gmail.com', 'M', '1981/02/25', 4, 3202, 1, 1, 4),
+('Rowland', 'Michelle', '021 788 8249', 'michelle_Rowland@gmail.com', 'F', '1987/05/16', 5, 0727, 1, 1, 1),
+('Rowland', 'Michelle', '021 788 8249', 'michelle_Rowland@gmail.com', 'F', '1987/05/16', 5, 0727, 1, 1, 3),
+('Joe', 'Moore', '093 345 6788', 'j.moore@gmail.com', 'M', '1990/11/07', 6, 1200, 2, 2, 2),
+('Joe', 'Moore', '093 345 6788', 'j.moore@gmail.com', 'M', '1990/11/07', 6, 1200, 2, 2, 4),
+('Hudson', 'Kendrick', '092 465 7403', 'ken.hud@gmail.com', 'M', '1999/05/09', 4, 0699, 2, 2, 6),
+('Hudson', 'Kendrick', '092 465 7403', 'ken.hud@gmail.com', 'M', '1999/05/09', 4, 0699, 2, 2, 5),
+('Bailey', 'George', '072 567 8234', 'CynB97@gmail.com', 'M', '1989/12/20', 6, 0391, 2, 2, 5),
+('Bailey', 'George', '072 567 8234', 'CynB97@gmail.com', 'M', '1989/12/20', 6, 0391, 2, 2, 4),
+('Cox', 'Erica', '013 999 8675', 'ericaCox22@gmail.com', 'F', '1995/10/05', 1, 2191, 2, 2, 5),
+('Cox', 'Erica', '013 999 8675', 'ericaCox22@gmail.com', 'F', '1995/10/05', 1, 2191, 2, 2, 2),
+('Wright', 'Benedict', '073 357 8902', 'benW77@gmail.com', 'M', '2000/02/25', 3, 9869, 1, 1, 4),
+('Wright', 'Benedict', '073 357 8902', 'benW77@gmail.com', 'M', '2000/02/25', 3, 9869, 1, 1, 5),
+('Redd', 'Wendy', '021 456 7891', 'Wendy.Redd@gmail.com', 'F', '1997/08/23', 2, 1195, 1, 1, 1),
+('Redd', 'Wendy', '021 456 7891', 'Wendy.Redd@gmail.com', 'F', '1997/08/23', 2, 1195, 1, 1, 6),
+('Soul', 'Randy', '011 785 6324', 'Randy_Soul@gmail.com', 'M', '1989/05/11', 4, 6900, 2, 2, 3),
+('Soul', 'Randy', '011 785 6324', 'Randy_Soul@gmail.com', 'M', '1989/05/11', 4, 6900, 2, 2, 2),
+('Williams', 'Trey', '034 784 6702', 'Trey-W@gmail.com', 'M', '1994/07/01', 5, 6900, 1, 1, 1),
+('Williams', 'Trey', '034 784 6702', 'Trey-W@gmail.com', 'M', '1994/07/01', 5, 6900, 1, 1, 2),
+('Xavier', 'Caroline', '015 674 8943', 'x_Caro@gmail.com', 'F', '2001/09/13', 6, 9869, 2, 2, 5);
+('Xavier', 'Caroline', '015 674 8943', 'x_Caro@gmail.com', 'F', '2001/09/13', 6, 9869, 2, 2, 6);
 
 --**********JOINING ALL THE TABLES WITH A LEFT JOIN*******
 SELECT dat.first_name AS first_name
